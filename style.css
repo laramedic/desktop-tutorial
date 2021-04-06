@@ -1,12 +1,25 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+html{
+    height: 100%;
 }
 
 /* 1. Header */
+
+main {
+    flex: 1 0 auto;
+}
 
 .header {
     background-color: #ffffff;
@@ -49,6 +62,7 @@ body {
     margin-right: 60px;
     line-height: 50px;
     margin: 15px 0;
+    cursor: pointer;
 }
 
 .header__nav-item2 {
@@ -196,4 +210,234 @@ h3{
     text-align: center;
     position:absolute;
     margin-top: 400px;
+}
+
+/* General nesto */
+
+.section{
+    padding: 80px 0;
+    max-width: 1280px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.section__title{
+    text-align: center;
+
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+/* Event page */
+
+
+.section-event{
+    display: grid;
+    grid-template-rows: 48px;
+    row-gap: 48px;
+    padding: 64px 15px;
+}
+
+@media screen and (min-width: 576px) {
+    .section-events{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        padding: 80px 32px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .section-events{
+        grid-template-columns: repeat(3, 1fr);
+        padding: 80px 0;
+        max-width: 930px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .section-events{
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1280px;
+    }
+}
+
+.event-card {
+    border: 1px solid #d0d0d0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    border-radius: 6px;
+    padding: 10px;
+}
+.event-card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.event-card__title {
+    font-size: 18px;
+    padding: 10px 0 20px;
+    border-bottom: 1px solid #d0d0d0;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.event-card__content {
+    margin-bottom: 15px;
+}
+
+.event-card__content-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.event-card__content-row:last-child {
+    margin-bottom: 0;
+}
+
+.event-card__item:last-child {
+    text-align: right;
+}
+
+.event-card__item-title {
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.event-card__item-value {
+    font-size: 12px;
+}
+
+/*event page*/
+
+.event-title{
+    text-align: center;
+}
+
+.section-events {
+    padding: 0 15px 64px;
+}
+
+.event-info__figure{
+    width: 100%;
+    height: 230px;
+    margin-bottom: 24px;
+}
+
+.event-info__figure-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-info__content {
+    margin-bottom: 15px;
+}
+
+.event-info__content-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.event-info__content-row:last-child {
+    margin-bottom: 0;
+}
+
+.event-info__item-title {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.event-info__item-value {
+    font-size: 14px;
+}
+
+.event-info__description {
+    font-size: 16px;
+    line-height: 150%;
+
+}
+
+.event-info__item:last-child {
+    text-align: right;
+}
+
+@media screen and (min-width: 500px) {
+    .event-info__figure {
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-event {
+        padding: 0 25px 65px;
+    }
+    .event-info {
+        display: flex;
+        justify-content: space-between;
+    }
+    .event-info__figure {
+        height: 230px;
+        width: 400px;
+    }
+    .event-info__content {
+        margin-bottom: 0;
+        width: 270px;
+    }
+    .event-info__content-row {
+        margin-bottom: 32px;
+    }
+    .event-info__item-title {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    .event-info__description {
+        width: 400px;
+        }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .section-event {
+        margin: 0 auto;
+        padding: 0 0 64px;
+        max-width: 930px;
+    }
+    .event-info__figure {
+        height: 350px;
+        width: 600px;
+    }
+    .event-info__content {
+        width: 300px;
+    }
+    .event-info__content-row {
+        margin-bottom: 32px;
+    }
+    .event-info__item-title {
+        font-size: 16px;
+    }
+    .event-info__item-value {
+        font-size: 16px;
+    }
+    .event-info__description {
+        width: 600px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .section-event {
+        max-width: 1280px;
+    }
+    .event-info__figure {
+        height: 450px;
+        width: 800px;
+    }
+    .event-info__content {
+        width: 400px;
+    }
+    .event-info__description {
+        width: 800px;
+    }
 }
